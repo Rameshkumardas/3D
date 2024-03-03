@@ -1,0 +1,21 @@
+
+.git
+.github
+docker.help
+# Exclude Python cache files
+__pycache__
+.mypy_cache
+.pytest_cache
+.ruff_cache
+
+# Exclude Python virtual environment
+./venv/
+
+# Exclude weights
+./weights/
+./tmp/
+
+# Exclude outputs
+./outputs/
+output*
+env/

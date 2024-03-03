@@ -1,0 +1,8 @@
+output.png
+output-rembg.png
+__pycache__
+tmp
+output*
+venv/*
+weights/*
+env/

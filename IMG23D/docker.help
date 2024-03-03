@@ -1,0 +1,66 @@
+sudo systemctl stop docker
+sudo systemctl start docker
+sudo systemctl restart docker
+
+sudo systemctl status docker
+
+----------------------------------
+sudo docker build -t txt23d-websocket .
+sudo docker tag txt23d-websocket das82916/txt23d-websocket:v1.0
+sudo docker push das82916/txt23d-websocket:v1.0
+----------------------------------
+
+sudo docker pull das82916/txt23d-websocket:v1.0
+sudo sudo docker run -dp 0.0.0.0:8001:8001 txt23d-websocket
+sudo docker run -p 0.0.0.0:8001:8001 txt23d-websocket
+
+docker ps
+
+----------------------------------
+# run bash in docker image
+sudo docker run -it 4f645d7fa229 /bin/bash 
+
+# start the container from docker image
+sudo docker run 4f645d7fa229
+
+# start container in deamon/background mode
+sudo docker run -d ed80aa9a484e
+----------------------------------------
+# pull image from docker hub
+sudo docker pull org/image:latest
+
+# push image to docker hub
+sudo docker push org/image:latest
+---------------------------------------
+# tag a docker image
+docker tag ed80aa9a484e tag
+
+# remove stopped containers
+docker container prune
+
+# remove a docker image
+sudo docker rmi cd88312388da
+
+# list running containers
+docker ps
+
+# list running containers including stopped containers
+docker ps -a
+
+# start a stopped container
+docker start container_id
+
+# stop a running container 
+docker stop container_id
+
+# run a bash shell into an already running container
+docker exec -it container_id /bin/bash
+
+# run a cmd in a container and exit
+docker exec container_id cmd
+
+# commit a container to create image
+docker commit container_id tag
+
+# check logs
+docker logs -f testh
